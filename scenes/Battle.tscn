@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://b87hso0ebljtp"]
+
+[ext_resource type="Script" uid="uid://ytekr4a3kyh0" path="res://scripts/battle_manager.gd" id="1_bdmed"]
+[ext_resource type="PackedScene" uid="uid://bonk8o1gu4srn" path="res://scenes/Enemy.tscn" id="2_2rusm"]
+[ext_resource type="PackedScene" uid="uid://dlmink8y1fsjs" path="res://scenes/Character.tscn" id="2_0448q"]
+[ext_resource type="Script" uid="uid://dku4rm76254qi" path="res://scripts/enemy.gd" id="3_0y4rl"]
+[ext_resource type="Script" uid="uid://b6bbgwetviso7" path="res://scripts/player.gd" id="5_ggyc1"]
+
+[node name="Battle" type="Node2D" unique_id=315942751]
+
+[node name="PlayerTeam" type="Node2D" parent="." unique_id=1654959263]
+
+[node name="Player" parent="PlayerTeam" unique_id=268211577 instance=ExtResource("2_0448q")]
+position = Vector2(421, 91)
+script = ExtResource("5_ggyc1")
+char_name = "Player"
+
+[node name="Player2" parent="PlayerTeam" unique_id=797131122 instance=ExtResource("2_0448q")]
+position = Vector2(308, 89)
+script = ExtResource("5_ggyc1")
+char_name = "Player"
+
+[node name="Player3" parent="PlayerTeam" unique_id=1973363769 instance=ExtResource("2_0448q")]
+position = Vector2(200, 92)
+script = ExtResource("5_ggyc1")
+char_name = "Player"
+
+[node name="EnemyTeam" type="Node2D" parent="." unique_id=635532871]
+
+[node name="Enemy" parent="EnemyTeam" unique_id=1809374772 instance=ExtResource("2_2rusm")]
+position = Vector2(71, 224)
+script = ExtResource("3_0y4rl")
+char_name = "Enemy"
+
+[node name="Enemy2" parent="EnemyTeam" unique_id=1956048019 instance=ExtResource("2_2rusm")]
+position = Vector2(193, 223)
+script = ExtResource("3_0y4rl")
+char_name = "Enemy"
+
+[node name="Enemy3" parent="EnemyTeam" unique_id=702799393 instance=ExtResource("2_2rusm")]
+position = Vector2(298, 221)
+script = ExtResource("3_0y4rl")
+char_name = "Enemy"
+
+[node name="BattleManager" type="Node2D" parent="." unique_id=531838854]
+script = ExtResource("1_bdmed")
